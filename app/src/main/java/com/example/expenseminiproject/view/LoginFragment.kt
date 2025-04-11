@@ -35,8 +35,8 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogin.setOnClickListener() {
             Toast.makeText(requireContext(), "Login Success", Toast.LENGTH_SHORT).show()
@@ -44,8 +44,8 @@ class LoginFragment : Fragment() {
 
         binding.btnRegister.setOnClickListener() {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-        }
 
+        }
     }
 
     override fun onDestroyView() {

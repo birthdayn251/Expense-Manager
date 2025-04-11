@@ -35,14 +35,16 @@ class RegisterFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLogin.setOnClickListener() {
+        binding.btnLogin.setOnClickListener()
+        {
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
-        binding.btnRegister.setOnClickListener() {
+        binding.btnRegister.setOnClickListener()
+        {
             Toast.makeText(requireContext(), "Register Success", Toast.LENGTH_SHORT).show()
         }
 
