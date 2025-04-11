@@ -9,13 +9,14 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.expenseminiproject.R
 import com.example.expenseminiproject.databinding.FragmentRegisterBinding
+import com.example.expenseminiproject.utils.navigateSafe
 
 /**
  * NhatNS
  * 11/04/2025
  * first sprint
  */
-class RegisterFragment : Fragment() {
+class RegisterFragment : BaseFragment() {
 
     private var _binding: FragmentRegisterBinding? = null
 
@@ -38,15 +39,31 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLogin.setOnClickListener()
-        {
-            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        mMainViewModel.mRegisterResult.observe(viewLifecycleOwner) { rs ->
+            if (rs > -1) {
+                Toast.makeText(requireContext(), "Register Success", Toast.LENGTH_SHORT).show()
+                findNavController().navigateSafe(R.id.action_registerFragment_to_loginFragment)
+            } else {
+                Toast.makeText(requireContext(), "Something went wrong, please try again later", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.btnRegister.setOnClickListener()
         {
-            Toast.makeText(requireContext(), "Register Success", Toast.LENGTH_SHORT).show()
+            val username = binding.edtUsername.text.toString()
+            val password = binding.edtPassword.text.toString()
+            if (username != "" && password != "") {
+                mMainViewModel.handleRegister(username, password)
+            } else {
+                Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
         }
+
+        binding.btnLogin.setOnClickListener()
+        {
+            findNavController().navigateSafe(R.id.action_registerFragment_to_loginFragment)
+        }
+
 
     }
 
