@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Cơ bản -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF888888</color>
+    <color name="light_gray">#FFD3D3D3</color>
+    <color name="dark_gray">#FF444444</color>
+    <color name="edit_text_color">#DEF0F0F0</color>
+
+    <!-- Đỏ -->
+    <color name="red">#FFFF0000</color>
+    <color name="light_red">#FFFF6666</color>
+    <color name="dark_red">#FF990000</color>
+
+    <!-- Xanh lá -->
+    <color name="green">#FF00FF00</color>
+    <color name="light_green">#FF66FF66</color>
+    <color name="dark_green">#FF006400</color>
+
+    <!-- Xanh dương -->
+    <color name="blue">#FF0000FF</color>
+    <color name="light_blue">#FF66CCFF</color>
+    <color name="dark_blue">#FF00008B</color>
+
+    <!-- Vàng -->
+    <color name="yellow">#FFFFFF00</color>
+    <color name="light_yellow">#FFFFFF99</color>
+    <color name="dark_yellow">#FFCCCC00</color>
+
+    <!-- Cam -->
+    <color name="orange">#FFFFA500</color>
+    <color name="light_orange">#FFFFD580</color>
+    <color name="dark_orange">#FFCC8400</color>
+
+    <!-- Tím -->
+    <color name="purple">#FF800080</color>
+    <color name="light_purple">#FFE0B3FF</color>
+    <color name="dark_purple">#FF4B0082</color>
+
+    <!-- Hồng -->
+    <color name="pink">#FFFFC0CB</color>
+    <color name="light_pink">#FFFFE4E1</color>
+    <color name="dark_pink">#FFFF69B4</color>
+
+    <!-- Màu pastel dễ thương -->
+    <color name="pastel_blue">#A3CEF1</color>
+    <color name="pastel_green">#B8E0D2</color>
+    <color name="pastel_pink">#F7D1CD</color>
+    <color name="pastel_yellow">#FFF3B0</color>
+
+    <!-- Màu button -->
+    <color name="button">#A17C46</color>
+
 </resources>
